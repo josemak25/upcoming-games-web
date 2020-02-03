@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Container } from "./styles";
+
 export default function Button({ children }) {
-  return <button>{children}</button>;
+  return <Container>{children}</Container>;
 }
