@@ -1,52 +1,53 @@
 import styled from "styled-components";
-
+import {colors} from '../../constants/index'
 
 export const Container = styled.div`
-    background: white;
-    width: 50%;
-    min-height: 30px;
-    border: 1 px solid;
-
-`
-
-export const MainContainer = styled.div`
-    background: red;
-    width: 35%;
+    background: #282829;
+    width: 18%;
     height: 80px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* border: 1px solid; */
+    border-radius: 2px;
+    border: 1px solid ${
+        colors.FONT_DARK_COLOR
+    };
 
     input[type = "radio"] {
             display: none;
         }
-
-    .reviews::before {
-        content: 'Rating';
-        font-size: 15px;
+    div > h3 {
         color: white;
-    }
-    .reviews {
-        font-size: 13px;
+        font-size: 18px;
+        font-weight: lighter;
+        margin-top: 8px;
+        margin-left: 10px;
     }
 
-    .star {
-        font-size: 20px;
-        padding: 0 6px 0 6px;
-        /* stroke: rgb(233, 24, 136);
-        stroke-width: 10; */
-        /* border: 1px solid #ff0075; */
+    div > h3 > span {
+        font-size: 15px;
+        color: ${colors.FONT_DARK_COLOR}
     }
 
 `
 
 export const MainStar = styled.div`
-    display: flex;
-    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: inline-block;
 
-    p {
-        border: 1px solid white;
+    .star {
+        font-size: 25px;
+        padding-left: 0 !important;
+        padding-right: 12px;
+    }
+
+    div {
+        float: right;
+        color: white;
+        padding: 0 3px 0 3px; 
+        margin-left: 8px;
+        margin-top: 2px;
+        border: 1px solid ${
+            colors.FONT_DARK_COLOR
+        };
     }
 `
