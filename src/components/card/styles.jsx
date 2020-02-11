@@ -4,8 +4,8 @@ export const Container = styled.div`
     margin: auto;
     width: 100%;
     display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: 500px) {
         display: inline-block;
@@ -14,83 +14,96 @@ export const Container = styled.div`
 
 `;
 
-export const Item = styled.div`
-`;
-
 export const Card = styled.div`
          background: white;
          color: black;
-         box-shadow: 3px 3px 2px #f1f0f0;
-         margin: 10px;
-         width: 90%;
-
+         width: 22%;
+         margin: 5px;
+         height: 450px;
+         
          img {
            width: 100%;
+           height: 350px;
          }
 
          h5 {
            margin-top: -15%;
            color: white;
            font-family: Arial, Helvetica, sans-serif;
-           padding: 0 0 0 20px;
+           padding-left:20px;
          }
 
-         h4 {
-           width: 100%;
-           opacity: 0.7;
-         }
-
-         h6 {
-           color: grey;
-           font-size: smaller;
-           opacity: 0.7;
-           margin-left: -87%;
-           margin-top: 20%;
-         }
-
-         p {
-           width: 18%;
-           margin-top: 10%;
-           text-align: center;
-           padding-top: 5px;
-           height: 25px;
-           border: rgb(233, 24, 136) solid 1px;
-           border-radius: 3px;
-           color: rgb(233, 24, 136);
-           margin-left: 40%;
-         }
 
          @media only screen and (max-width: 500px) {
-           width: 100%;
+           width: 80%;
            margin: auto;
            margin-top: 50px;
+           height: 450px;
          }
 
-         .card h4 {
-           margin-top: 35px;
+         img {
+           height: 350px;
          }
 
          .card h5 {
            padding: 0 0 0 30px;
          }
 
-         @media only screen and (max-width: 360px) {
-           .card h6 {
-             margin-top: 55px;
-           }
-
-           .card p {
-             margin-top: 13.5%;
-           }
-         }
+         
        `;
 
 export const Title = styled.div`
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: auto;
+          align-items: center;
+          margin: auto;
+          margin-top: 50px;
+
+          .flex-item:nth-child(1) {
+            margin-left: 20px;
+            margin-top: -10px;
+          }
+
+          .flex-item:nth-child(2) {
+            margin-right: 20px;
+            border: rgb(233, 24, 136) solid 1px;
+            border-radius: 3px;
+            padding: 5px;
+          }
+
+          .flex-item h4 {
+            opacity: 0.7;
+            text-transform: capitalize;
+            font-size: 20px;
+          }
+
+          .flex-item h6 {
+            text-transform: capitalize;
+            color: grey;
+            font-size: smaller;
+            opacity: 0.7;
+          }
+
+
          @media only screen and (max-width: 500px) {
-           margin-top: 30px;
+           margin-top: 60px;
+         }
+         @media only screen and (max-width: 360px) {
+           margin-top: 55px;
+
+           img {
+           height: 70px;
+         }
          }
 
-         @media only screen and (max-width: 360px) {
-           margin-top: 20px;
+         @media only screen and (max-width: 320px) {
+            .flex-item h4 {
+              font-size: 18px;
+          }
+          img {
+            height: 50px;
+          }
          }
        `;
