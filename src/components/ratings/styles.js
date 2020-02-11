@@ -27,6 +27,7 @@ export const Container = styled.div`
         color: ${colors.FONT_DARK_COLOR}
     }
 
+
 `
 
 export const MainStar = styled.div`
