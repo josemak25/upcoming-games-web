@@ -8,13 +8,26 @@ export const Container = styled.div`
     padding-top: 2rem;
   }
 
-  .tab-nav-contain {
+  .tab-flex {
+    display: flex;
+    flex-direction: row;
     width: 90%;
     margin: auto;
-    display: flex;
-    justify-content: flex-start !important;
-    list-style-type: none;
     border-bottom: 0.3px solid ${colors.FONT_DARK_COLOR};
+  }
+
+  .tab-flex div:nth-of-type(1) {
+    flex-grow: 1;
+  }
+
+  .tab-flex div:nth-of-type(2) {
+    flex-grow: 0;
+  }
+
+  .tab-nav-contain {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
     color: ${colors.FONT_DARK_COLOR};
   }
 
@@ -54,6 +67,21 @@ export const Container = styled.div`
     animation-timing-function: linear;
   }
 
+  .active-icon {
+    font-size: 5px;
+    text-align: end;
+    color: ${colors.FONT_DARK_COLOR};
+    cursor: pointer;
+  }
+
+  .grid-display {
+    margin-right: 10px;
+  }
+
+  .grid-option {
+    stroke: yellow !important;
+  }
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -86,6 +114,20 @@ export const Container = styled.div`
       width: 100%;
     }
 
+    .active-icon {
+      float: right;
+    }
+
+    .tab-nav-contain {
+      justify-content: space-evenly;
+    }
+
+    .tab-flex {
+      flex-direction: column-reverse;
+      width: 90%;
+    }
+
+
     @keyframes float-in {
       from {
         margin-left: -5px;
@@ -101,14 +143,13 @@ export const Container = styled.div`
     }
 
     .tab-nav-contain {
-      justify-content: center;
-      width: 90%;
+      width: 100%;
     }
   }
 
   @media screen and (max-width: 414px) {
     .tab-nav-contain {
-      width: 90%;
+      width: 100%;
     }
 
     .item {
@@ -118,20 +159,20 @@ export const Container = styled.div`
   }
 
   @media screen and (max-width: 411px) {
-      .item {
-          padding: 11px !important;
-      }
+    .item {
+      padding: 11px !important;
+    }
   }
 
   @media screen and (max-width: 375px) {
-      .item {
-          padding: 7px !important;
-      }
+    .item {
+      padding: 7px !important;
+    }
   }
   @media screen and (max-width: 360px) {
     .item {
-      font-size: 12.5px !important;
-      padding: 11px !important;
+      font-size: 13px !important;
+      padding: 10px !important;
     }
   }
 
