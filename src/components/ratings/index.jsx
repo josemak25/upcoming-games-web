@@ -7,7 +7,7 @@ function Rating() {
 
   const [state, setState] = useState({
     rating: null,
-    value: 0.0
+    value: 0
   });
 
   return (
